@@ -12,7 +12,7 @@ Given the data archive located at https://drive.google.com/file/d/0B5ADI2usunVQO
 3. Word count III: 
   Tokenize the comments and retrieve the top 10 mentioned Chinese terms associated with each brand from the texts. You may use 3rd party libraries such as Jieba to complete this task.
 
-4: Count & Visualize:
+4. Count & Visualize:
   a: Count the number of reposts and comments per day (as separate counts), per brand
   b: Plot the count over the entire timeframe
 
