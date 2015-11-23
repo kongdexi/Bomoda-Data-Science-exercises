@@ -1,6 +1,7 @@
 import json
 import os
 import re
+
 from collections import Counter
 user = []
 location = []
@@ -12,8 +13,14 @@ for file in os.listdir('statuses'):
                 json_data = json.load(json_file)
                 jd = json_data['user']
                 user.append(jd['id'])
-                location.append(jd['location'].encode('ascii','ignore'))
+                lc = jd['location']
+                text = json.dumps(lc)
+                location.append(text)                
 
 c = Counter(user)
+locations = Counter(location)
 print c.most_common(10)
+chinese = locations.most_common(10)
+for location in chinese:
+    print location[0].decode('unicode_escape') + '%d' % (location[1])
 
